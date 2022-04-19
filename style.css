@@ -136,6 +136,10 @@ nav {
 	right: 5%;
 }
 
+.arrow-up::after {
+	content: url(./images/icon-arrow-up.svg) !important;
+}
+
 .dropdown-container {
 	position: relative;
 }

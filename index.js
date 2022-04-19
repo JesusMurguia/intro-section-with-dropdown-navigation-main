@@ -4,10 +4,12 @@ window.onload = function () {
         dropdown.addEventListener('mouseover', function (e) {
             let dropdownContent = this.querySelector('.dropdown-content');
             dropdownContent.classList.add('open');
+            this.querySelector('.dropdown-btn').classList.add('arrow-up');
         });
         dropdown.addEventListener('mouseout', function (e) {
             let dropdownContent = this.querySelector('.dropdown-content');
             dropdownContent.classList.remove('open');
+            this.querySelector('.dropdown-btn').classList.remove('arrow-up');
         });
     });
     let dropdownsmobile = document.querySelectorAll('[data-dropdown-mobile]');
@@ -15,6 +17,7 @@ window.onload = function () {
         dropdown.addEventListener('click', function (e) {
             let dropdownContent = this.querySelector('.dropdown-content');
             dropdownContent.classList.toggle('open');
+            this.querySelector('.dropdown-btn').classList.toggle('arrow-up');
         });
     });
     let closeMenu = document.querySelector('[data-close-menu]');
@@ -22,11 +25,9 @@ window.onload = function () {
     let navMobile = document.querySelector('[data-nav-mobile]');
     let navMobileContent = document.querySelector('[data-nav-mobile-content]');
     closeMenu.addEventListener('click', function (e) {
-        console.log('close');
         navMobile.classList.remove('open');
     });
     openMenu.addEventListener('click', function (e) {
-        console.log('click');
         navMobileContent.classList.add('open');
         navMobile.classList.add('open');
     });
