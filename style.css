@@ -121,6 +121,7 @@ nav {
 .btn:hover {
 	border-color: var(--black);
 	color: var(--black);
+	background-color: var(--white);
 }
 
 .dropdown-btn {
